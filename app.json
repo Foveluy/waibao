@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/trainData/trainData",
+    "pages/body/body",
+    "pages/me/me",
+    "pages/commit/commit",
+    "pages/course/course",
+    "pages/dataLog/dataLog",
+    "pages/booking/booking",
+    "pages/auth/auth",
+    "pages/qrcode/qrcode",
+    "pages/admin/admin",
+    "pages/calinder/calinder",
+    "pages/bookme/bookme",
+    "pages/logs/logs",
+    "pages/main/main"
+  ],
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#f00",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "iconPath": "res/calendar_select.png",
+        "selectedIconPath": "res/calendar.png",
+        "pagePath": "pages/course/course",
+        "text": "约课"
+      },
+      {
+        "iconPath": "res/user_select.png",
+        "selectedIconPath": "res/user.png",
+        "pagePath": "pages/me/me",
+        "text": "我"
+      },
+      {
+        "iconPath": "res/home.png",
+        "selectedIconPath": "res/home_select.png",
+        "pagePath": "pages/main/main",
+        "text": "店铺主页"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "力量纵横",
+    "navigationBarTextStyle": "white"
+  }
+}

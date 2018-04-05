@@ -1,0 +1,39 @@
+.personCourse {
+  padding: 1em;
+  font-size: 15px;
+  background: #333;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.p-titlecontent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-title {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.p-content {
+  font-size: 15px;
+  margin-top: 10px;
+}
+.p-right-arrow{
+  width: 40rpx;
+  height: 40rpx;
+}
+.content-Wrap{
+ display:  flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.delete{
+  padding: 1em;
+  background: #fabeb9;
+  border-radius: 10px;
+}

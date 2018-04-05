@@ -1,0 +1,112 @@
+.course-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cover {
+  background: -webkit-gradient(linear, right bottom, left top, from(rgba(0, 150, 200, 0.4)), to(rgba(0, 50, 230, 0.7)));
+  border-radius: 5px;
+  height: 100%;
+}
+.cover-done {
+  background: -webkit-gradient(linear, right bottom, left top, from(rgba(220, 220, 220, 0.8)), to(rgba(50, 50, 50, 0.8)));
+  border-radius: 5px;
+  height: 100%;
+}
+
+.course-item {
+  background-image: url('http://img2.imgtn.bdimg.com/it/u=977532692,3076309026&fm=26&gp=0.jpg');
+  width: 95%;
+  border-radius: 5px;
+  margin-top: 12px;
+}
+
+.course-detail {
+  color: white;
+  padding: 0.75em;
+}
+
+.course-detail .name {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.course-detail .wrap {
+  display: flex;
+  margin-top: 10px;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.student {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.course-item image {
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+  margin: 3px;
+}
+.userinfo-avatar{
+  position: relative;
+}
+.enter{
+   position: absolute; 
+   top:0px;
+   left: 0px;
+   width: 80rpx;
+}
+
+.br {
+  /* border: 1px dashed white;
+  z-index: 10;
+  width: 100%; */
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.br:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.4);
+  color: white;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.book {
+  color: white;
+  position: absolute;
+  padding: 0.5em 2.5em;
+  background-color: #3cf;
+  margin-top: 10px;
+  right: 20px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.book:active {
+  background-color: #cdf;
+}
+
+.book-done{
+  color: white;
+  position: absolute;
+  padding: 0.5em 2.5em;
+  background-color: #404040;
+  margin-top: 10px;
+  right: 20px;
+  font-size: 12px;
+  border-radius: 15px;
+}

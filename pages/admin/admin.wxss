@@ -1,0 +1,54 @@
+/* pages/admin/admin.wxss */
+page{
+  background: #eee;
+}
+
+.wrap{
+   margin-bottom: 10px; 
+}
+.gpa{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  
+  
+  background: white;
+}
+.gpa view{
+  padding: 10px;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+  width: 100%;
+}
+
+.vip{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+  padding: 3px;
+  background: white;
+}
+.user-avatar{
+  width: 80rpx;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.input{
+  margin-left: 20px;
+  padding-left: 5px;
+  background: #eee;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+  border-radius: 5px;
+  width: 50px;
+}
+.credit{
+  font-size: 12px;
+  color: rgba(120, 120, 120, 0.8);
+  margin-top: 5px;
+}
+.user{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 70px;
+}
+

@@ -1,0 +1,42 @@
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  -webkit-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalDialog  image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.modalDialog .modal {
+  width: 90%;
+  height: 250px;
+  overflow: scroll;
+  background: white;
+  margin-top: 30%;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  margin: 3px;
+  font-size: 15px;
+  align-items: center;
+}
+.Modal-name{
+  vertical-align: middle;
+}

@@ -1,0 +1,85 @@
+/* pages/dataLog/dataLog.wxss */
+
+page {
+  background: #eee;
+  padding-bottom: 50px;
+}
+
+.wrap {
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.wrap-delete {
+  display: flex;
+  margin-bottom: 5px;
+  transition: transform 0.4s;
+  transform: translateX(-350px);
+}
+
+.picker-item {
+  width: 80%;
+  background: white;
+  padding: 10px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  color: rgba(120, 120, 120, 0.8);
+  font-size: 15px;
+}
+
+.input-item {
+  width: 80%;
+  background: white;
+  padding: 10px;
+  border-top: 1px solid rgba(120, 120, 120, 0.2);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.delete {
+  width: 15%;
+  padding: 10px;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  background: rgba(250, 80, 80, 0.8);
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.add {
+  text-align: center;
+  color: #22f;
+  width: 100%;
+  padding: 10px;
+}
+
+.add:active {
+  background: #66f;
+}
+
+.finished {
+  padding: 10px;
+  text-align: center;
+  color: #2f3;
+  width: 100%;
+}
+
+.finished:active {
+  background: #6f6;
+}
+
+.Del {
+  padding: 10px;
+  text-align: center;
+  color: rgba(250, 80, 80, 0.8);
+  width: 100%;
+}
+
+.btn-block {
+  background: white;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  align-items: center;
+  border-top: 1px solid rgba(120, 120, 120, 0.2);
+}

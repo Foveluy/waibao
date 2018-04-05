@@ -1,0 +1,12 @@
+@import "ControlPanel/cp.wxss";
+@import "Modal/Modal.wxss";
+@import "CourseList/courselist.wxss";
+@import "personCourse/pcourse.wxss";
+page{
+  background: #eee;
+  padding-bottom: 30px;
+}
+
+
+
+

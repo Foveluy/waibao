@@ -1,0 +1,16 @@
+<!--pages/dataLog/dataLog.wxml-->
+
+<view class="wrap{{item.Type =='delete'?'-delete':''}}" wx:for="{{form}}" wx:for-index="idx" wx:key="idx">
+  <picker class="picker-item" id='{{idx}}' bindchange="bindPickerChange" value="{{item.index}}" range="{{array}}">
+  {{array[item.index]}}
+  </picker>
+  <input type='number' value="{{item.kg}}"  id='{{idx}}' bindblur="bindInputBlur" class="input-item" />
+  <view class="delete" id='{{idx}}' bindtap="Delete" >删除</view>
+</view>
+
+<view class="btn-block">
+<view bindtap="add" class="add">加一</view>
+<view bindtap="finished" class="finished">{{time =='none'?'完成':'修改'}}</view>
+<view bindtap="Del" hidden="{{time =='none'?true:false}}" class="Del">删除</view>
+
+</view>

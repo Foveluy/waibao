@@ -1,0 +1,25 @@
+/* pages/main/main.wxss */
+
+page {
+  background-color: #333;
+  color: white;
+}
+
+.pic1 {
+  width: 100%;
+}
+
+.address {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 23;
+  font-style: bold;
+  text-align: center;
+}
+
+.phone {
+  color: #1890ff;
+}

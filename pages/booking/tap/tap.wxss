@@ -1,0 +1,33 @@
+.tap {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.tapWrap {
+  display: flex;
+}
+
+.tapWrap .booking {
+  padding: 0.75em;
+  width: 200%;
+  background: #5555FF;
+}
+
+.tapWrap .booking:active {
+  background: #9bf;
+}
+
+.tapWrap .back {
+  padding: 0.75em;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.tapWrap .back:active {
+  background: #333;
+}
+
+

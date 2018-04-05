@@ -1,0 +1,23 @@
+<template name="CP">
+  <view class="controlPanel">
+   <view class="title">
+      <view class="trainerList">
+        <view class="trainerListWrap">
+          <image bindtap="ChangeTrainer" wx:for="{{trainerList}}" id='{{index}}' wx:key="index" class='zongheng' src="{{item.avatarUrl}}"></image>
+        </view>
+      </view>
+
+      <view class="Scan" bindtap="qrScan">
+        <image class="codeScan"  src="../../res/scanning-barcode.png"></image> 
+      </view>
+    </view>
+
+    <view class="br"></view>
+    <view class="select-wrap">
+      <view bindtap='selectDay' id='{{idx}}' class="daywrap {{currentSelect == idx ? 'active':' '}}" wx:for="{{DateAry}}" wx:key="{{item.day}}" wx:for-index="idx">
+        <view class="day">{{item.day}}</view>
+        <view class="weekday">{{item.weekDay}}</view>
+      </view>
+    </view>
+  </view>
+</template>

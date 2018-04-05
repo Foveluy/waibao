@@ -1,0 +1,15 @@
+<!--pages/bookme/bookme.wxml-->
+<web-view src="https://zh.9uhxir.top/uploads/admin/record.html"></web-view>
+<!-- <view class="block" wx:for="{{record}}" wx:key="{{index}}">
+  <view class="name">{{item.trainer}}</view>
+  <view class="br"></view>
+  <view class="content">
+    <view class="wrap">
+      <view class="name">会员：{{item.username}}</view>
+      <view class="date">约课日期：{{item.date}}</view>
+      <view class="time">开课时间：{{timeAry[item.start]}}~{{timeAry[item.end]}}</view>
+    </view>
+    <image class='avt' src="{{item.avatarUrl}}"></image>
+  </view>
+  <view class="phone">会员电话：{{item.phone}}</view>
+</view> -->

@@ -1,0 +1,8 @@
+<!--pages/auth/auth.wxml-->
+<view class="text">
+请点击授权，以此使用《力量纵横》
+</view>
+
+<button bindtap="auth">授权</button>
+
+

@@ -1,0 +1,62 @@
+@import "../Commen/Commen.wxss";
+
+.recordItem {
+  margin-bottom: 5px;
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.course {
+  padding: 10px;
+  font-size: 15px;
+  color: rgba(150, 150, 150, 0.8);
+}
+.bref-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recordItem-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-arrow{
+    width: 35rpx;
+  height: 35rpx;
+  margin-right: 8px;
+}
+.bref {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.date {
+  padding: 10px;
+  font-size: 12px;
+  color: rgba(150, 150, 150, 0.6);
+}
+
+.br:after {
+  border-top: 1px dashed rgba(150, 150, 150, 0.4);
+  margin-right: 3px;
+}
+
+.trainer-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 5px solid rgba(200, 200, 255, 0.4);
+}
+.wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.commited{
+  padding-right: 10px;
+  color: rgba(255, 30, 30, 0.4);
+}

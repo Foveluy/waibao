@@ -1,0 +1,45 @@
+<!--pages/calinder/calinder.wxml-->
+<view class="trainer-detail">
+  <view class="content">
+    <view class="title">{{trainer.trainer}}</view>
+    <view bindtap='dis' class="bref">{{trainer.bref}}</view>
+  </view>
+  <view class="icon">
+    <image class="userinfo-avatar" src="{{trainer.avatarUrl}}" background-size="cover"></image>
+  </view>
+</view>
+
+<view class="dateWrap">
+  <view class="time">{{currentDate}}</view>
+</view>
+
+
+<view class="time" wx:for="{{time}}" wx:key="{{index}}">
+  <view class="timeWrap">
+    <view class="realTime">{{item.time}}</view>
+  </view>
+  <view class="barWrap">
+    <view class="pickModel">
+      <view style="background:{{ item.Type == 'T'?'#fef3eb':(item.Type == 'yours'?'#cfefdf':(item.Type == 'other'?'#e4e2fa':'white') ) }}" class="bar">
+        {{ item.Type == 'T'?'团体课':(item.Type == 'yours'?'你的预约':(item.Type == 'other'?'别人的预约':'')) }}
+      </view>
+      <view class="br"></view>
+    </view>
+  </view>
+</view>
+
+<view class="pickerWrap">
+  <view class="picker-item">
+    <picker class="start" bindchange="bindStartPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{startIndex}}" range="{{multiArray}}">
+      <view class="picker">开始时间：{{multiArray[startIndex]}}</view>
+    </picker>
+  </view>
+  <view class="picker-item" id='mid'>
+    <picker class="end" bindchange="bindEndPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{endIndex}}" range="{{multiArray}}">
+      <view class="picker">结束时间：{{multiArray[endIndex]}}</view>
+    </picker>
+  </view>
+  <view bindtap="bookAsk" id='book' class="picker-item">
+    <view class="book">约ta</view>
+  </view>
+</view>

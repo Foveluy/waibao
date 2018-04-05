@@ -1,0 +1,69 @@
+@import "./picker.wxss";
+@import './dateWrap.wxss';
+page{
+  padding-bottom: 70px;
+}
+
+.trainer-detail{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: #333;
+  padding: 1em;
+}
+
+.trainer-detail .title{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.icon image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+
+.time {
+  display: flex;
+   text-align: center; 
+}
+
+.timeWrap {
+  width: 20%;
+  margin-bottom: 15px;
+  color: rgba(120, 120, 120, 0.8);
+
+}
+.realTime{
+  top:50%;
+}
+
+.barWrap {
+  width: 80%;
+  position: relative;
+}
+
+.bar {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top:-25%;
+  color: rgba(120, 120, 120, 0.3);
+}
+
+.br {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  top:-25%;
+  border-top: 1px solid rgba(120, 120, 120, 0.3);
+  color: white;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}

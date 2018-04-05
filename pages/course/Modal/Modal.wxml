@@ -1,0 +1,15 @@
+<template name='Modal'>
+  <view bindtap='modalClick' class="modalDialog" style="opacity:{{ModalUse.opacity}};pointer-events:{{ModalUse.Pevents}}">
+    <view class="modal">
+      <view style="text-align: center;margin:5px;">约课会员</view>
+      <scroll-view scroll-y style="height: 200px;">
+        <view wx:for="{{CourseList[ModalUse.Click].peoples}}" wx:key="{{idx}}" wx:for-index="idx" class="icon">
+          <image class="userinfo-avatar" src="{{item.avatarUrl}}" background-size="cover">
+          </image>
+          <image hidden="{{item.enter == 'true'? false:true}}"  src="../../res/checked.svg"></image>
+          <view class="Modal-name">{{item.name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>

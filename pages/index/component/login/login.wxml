@@ -1,0 +1,3 @@
+<template name="login-template">
+  <view class="loginBtn" hidden="{{isLogin}}" bindtap="next">登陆</view>
+</template>

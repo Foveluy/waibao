@@ -1,0 +1,39 @@
+/* pages/qrcode/qrcode.wxss */
+@import "../Commen/Commen.wxss";
+
+page{
+  background: #eee;
+}
+
+.course-record{
+  padding: 1em;
+  margin:10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.br:after{
+  border-top: 1px dashed rgba(120, 120, 120, 0.2);
+  
+}
+
+.course-name{
+  margin: 5px;
+  color: rgba(120, 120, 120, 0.8);
+  font-size: 15px;
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+.enter{
+  background: -webkit-gradient(linear, right bottom, left top, from(#948aec), to(rgba(0, 50, 230, 0.7)));
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}

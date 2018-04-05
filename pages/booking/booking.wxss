@@ -1,0 +1,59 @@
+/* pages/booking/booking.wxss */
+
+@import "tap/tap.wxss";
+ @import "CourseDetail/coursedetail.wxss"; 
+
+page {
+  background: #333;
+  padding-bottom: 75px;
+}
+.topImage{
+  display: flex;
+  width: 100%;
+}
+.topWrap{
+  display: flex;
+  flex-direction: row;
+  width: 1600px;
+}
+
+
+.topImage image {
+  height: 150px;
+  margin-right: 3px;
+}
+
+.trainer-detail {
+  display: flex;
+  background: #222;
+  margin: 10px;
+  border-radius: 5px;  
+}
+
+.trainer-detail image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.trainer-detail .centent {
+  color: white;
+  width: 160%;
+  word-break: break-all;
+  padding: 1em;
+  font-size: 12px;
+}
+
+.centent .title {
+  font-size: 25px;
+  font-style: bold;
+  padding-bottom: 10px;
+}
+
+.trainer-detail .icon {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  width: 100%;
+  padding: 10px;
+}

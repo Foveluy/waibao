@@ -1,0 +1,10 @@
+<template name='bookingtap'>
+
+<view class="tap">
+  <view class="tapWrap">
+  <view bindtap='bookClick' class="booking">立即约课</view>
+  <view bindtap='naviBack' class="back">返回</view>
+  </view>
+</view>
+
+</template>

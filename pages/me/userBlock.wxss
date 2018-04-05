@@ -1,0 +1,41 @@
+.userBlock{
+  background: white;
+}
+
+.userBlock image{
+  width: 15px;
+  height: 15px;
+}
+
+.trainData{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+  padding: 12px;
+}
+
+.trainData:active{
+  background: #ccc;
+}
+.userCard{
+   background: #000;
+}
+
+.userBody{
+  display: flex;
+
+}
+.height{
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255,255, 0.2);
+}
+.userBody view{
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.bodyfat{
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,31 @@
+.Wrap {
+  display: flex;
+  background: #222;
+  margin: 10px;
+  border-radius: 5px;
+
+}
+
+.br {
+  /* border: 1px dashed white;
+  z-index: 10;
+  width: 100%; */
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.br:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid grey;
+  color: white;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+

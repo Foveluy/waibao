@@ -1,0 +1,90 @@
+/* pages/me/me.wxss */
+@import "./recordItem.wxss";
+@import "./userBlock.wxss";
+page{
+  background: #eee;
+  padding-bottom: 40px;
+}
+.auth{
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background: white;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+}
+.T{
+  display: flex;
+  justify-content: center;
+  /* width: 100%; */
+  background: white;
+  padding: 5px;
+}
+.T image{
+  width: 150px;
+  border: 1px dashed rgba(120, 120, 120, 0.2);
+  border-radius: 5px;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 5px solid rgba(200, 200, 255, 0.4);
+}
+
+.userPic {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  margin: 20rpx;
+}
+.title{
+  text-align: center;
+  color:  rgba(150, 150, 150, 0.8)
+}
+
+.info view {
+  margin: 2px;
+}
+
+.course-record .title {
+  margin: 20px;
+}
+
+.user-name {
+  font-size: 20px;
+}
+
+.course-record .record-detail {
+  text-align: center;
+  color: #aaa;
+}
+
+.newpic {
+ 
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  position: relative;
+}
+
+.inside-pic {
+  background-color: rgba(0, 0, 0, 0);
+  width: 150px;
+}
+
+.title{
+  background: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+

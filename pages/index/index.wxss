@@ -1,0 +1,36 @@
+/**index.wxss**/
+@import "component/login/login.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 250rpx;
+  height: 250rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); */
+}
+
+.userinfo-nickname {
+  color: white;
+}
+
+.usermotto {
+  margin-top: 25px;
+  color: white;
+}
+
+#tmp{
+  height: 87px;
+  width: 266px;
+  margin-top: 15px;
+}
+
+page {
+  background: #333;
+}
+

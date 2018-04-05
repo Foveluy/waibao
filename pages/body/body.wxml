@@ -1,0 +1,42 @@
+<!--pages/body/body.wxml-->
+<view class="block">
+  <view class="left">真名</view>
+  <input bindinput="onNameChange" id='0' value="{{name}}" class='input' />
+</view>
+
+
+<view class="block">
+  <view class="left">年龄</view>
+  <input type="number" bindinput="change" id='0' value="{{body[0]}}" class='input' />
+</view>
+
+<view class="block">
+  <view class="left">身高</view>
+  <input type="number" bindinput="change" id='1' value="{{body[1]}}" class='input' />
+</view>
+
+<view class="block">
+  <view class="left">体重</view>
+  <input type="number" bindinput="change" id='2' value="{{body[2]}}" class='input' />
+</view>
+
+<view class="block">
+  <view class="left">体脂率</view>
+  <input type="number" bindinput="change" id='3' value="{{body[3]}}" class='input' />
+</view>
+
+<view class="block">
+  <view class="left">电话号码</view>
+  <input type="number" bindinput="change" id='phoneNumber' value="{{phoneNumber}}" class='input' />
+</view>
+
+<view class="block">
+  <view class="left">生日</view>
+  <picker mode="date" value="{{date}}" start="1930-09-01" end="2100-09-01" bindchange="bindDateChange">
+    <view class="picker">{{date}}</view>
+  </picker>
+</view>
+
+<view class="block" bindtap="finished" style="padding:8px;Justify-content:center">
+  <view class="done"> 完成</view>
+</view>

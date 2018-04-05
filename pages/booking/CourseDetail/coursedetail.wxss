@@ -1,0 +1,43 @@
+@import "../../Commen/Commen.wxss";
+
+.Wrap .detail-wrap {
+  width: 100%;
+}
+
+.detail-wrap .title {
+  color: white;
+  padding: 10px;
+  background: #111;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.detail-wrap .content {
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  background: #222;
+}
+
+.detail-wrap .tag {
+  background: #111;
+  font-size: 15px;
+  color: #55f;
+  width: 35%;
+  padding: 3px;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.inside-content .text {
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  background: #222;
+  border-radius: 5px;
+}
+
+.br:after {
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+}

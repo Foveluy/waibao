@@ -1,0 +1,11 @@
+<!--pages/qrcode/qrcode.wxml-->
+
+<view class="course-record" hidden="{{item.enter == 'true'?true:false }}" wx:for="{{course}}" wx:key="index">
+  <view class="course-name">{{item.course}}</view>
+  <view class="br"></view>
+  <view class="content">
+  <view class="trainer">教练:{{item.trainer}}</view>
+  <view class="enter" bindtap="enter" id='{{item.courseID}}'>入场</view>
+  </view>
+  <view class="course-name">{{item.time}}</view>
+</view>

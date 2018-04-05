@@ -1,0 +1,17 @@
+<template name='course-detail'>
+
+<view class="Wrap" wx:for="{{courseDetail.content}}" wx:key="{{idx}}" wx:for-index="idx">
+  <view class="detail-wrap">
+    <view class="title">{{item.title}}</view>
+    <view class="br"></view>
+    <view class="content">{{item.bref}}</view>
+    <view class="br" style="margin-left:20px;"></view>
+    <view class="inside-content" wx:for="{{item.tag}}" wx:for-item="one" wx:for-index='index' wx:key="{{index}}">
+      <view class="tag">{{one.title}}</view>
+      <view class="text">{{one.bref}}</view>
+    </view>
+  </view>
+
+</view>
+
+</template>

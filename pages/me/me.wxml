@@ -1,0 +1,103 @@
+<!--pages/me/me.wxml-->
+
+<view bindtap='userCard' class="userCard">
+  <view class="newpic">
+    <view class="userPic">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="info">
+      <view class="user-credi">{{realname}}</view>
+      <view class="user-credit">余额：{{credit}}课时</view>
+      <view class="user-phone">电话：{{phone}}</view>
+    </view>
+    <image class="inside-pic" src="../../res/zongheng_icon.jpg" mode="widthFix"></image>
+
+  </view>
+  <view class="userBody">
+    <view class="age">{{body[0]}}岁</view>
+    <view class="height">{{body[1]}}cm</view>
+    <view class="weight">{{body[2]}}kg</view>
+    <view class="bodyfat">bf:{{body[3]}}%</view>
+  </view>
+</view>
+
+<wxs module="foo">
+var some_msg = "<view>dd</view>";
+
+module.exports = {
+    msg : some_msg,
+}
+</wxs>
+
+<view class="userBlock">
+  <view bindtap="traineData" class="trainData">
+    <view>我的健身数据</view>
+    <image src="../../res/right-arrow.svg"></image>
+  </view>
+</view>
+
+<view wx:if="{{ trainer =='false' ? false:true}}" class="userBlock">
+  <view bindtap="bookme" class="trainData">
+    <view>教练权限：查看约课会员</view>
+    <image src="../../res/right-arrow.svg"></image>
+  </view>
+</view>
+
+
+<view class="auth" wx:if="{{ admin=='false' ? false:true}}">
+  <view bindtap="admin">管理者权限</view>
+</view>
+<view class="T" wx:if="{{ trainer =='false' ? false:true}}">
+  <image src="../../res/urlcode.png" mode="widthFix"></image>
+</view>
+
+<view class="course-record">
+  <view bindtap="showPersonCourse" style="color:{{showpersonCourse == true?'black':''}}" class="title">私教约课记录</view>
+  <view class="record-detail" hidden="true">暂时没有记录</view>
+  <view wx:if="{{showpersonCourse}}" class="records">
+    <view bindtap="toCommit" class="recordItem" id='{{item.trainer}}' data-courseid="{{item.date+'-'+item.start+'-'+item.end}}" wx:key="idx" wx:for-index="idx" wx:for="{{person}}">
+      <view class="recordItem-title">
+        <view class="course">私人教练课程</view>
+        <image class="right-arrow" src="../../res/right-arrow.svg" background-size="cover"></image>
+      </view>
+      <view class="br"></view>
+      <view class="bref-block">
+        <view class="bref">{{item.trainer}}</view>
+        <image class="trainer-avatar" src="{{item.avatarUrl}}" background-size="cover"></image>
+      </view>
+
+      <view class="br"></view>
+      <view class="wrap">
+        <view class="date">{{item.date}} 「{{timeAry[item.start]}}~{{timeAry[item.end]}}」</view>
+        <view class="commited" hidden="{{item.commit == 'false'?false:true }}">未评价</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<view class="course-record">
+  <view bindtap="showTCourse" style="color:{{showTCourse == true?'black':''}}" class="title">团课记录</view>
+  <view class="record-detail" hidden="true">暂时没有记录</view>
+  <view wx:if="{{showTCourse}}" class="records">
+    <view bindtap="toCommit" class="recordItem" id='{{item.trainer}}' data-courseid="{{item.courseID}}" wx:key="idx" wx:for-index="idx" wx:for="{{records}}">
+      <view class="recordItem-title">
+        <view class="course">{{item.course}}</view>
+        <image class="right-arrow" src="../../res/right-arrow.svg" background-size="cover"></image>
+      </view>
+      <view class="br"></view>
+      <view class="bref-block">
+        <view class="bref">{{item.trainer}}</view>
+        <image class="trainer-avatar" src="{{item.avatarUrl}}" background-size="cover"></image>
+      </view>
+
+      <view class="br"></view>
+      <view class="wrap">
+        <view class="date">{{item.date}}</view>
+        <view class="commited" hidden="{{item.commited == 'false'?false:true }}">未评价</view>
+      </view>
+    </view>
+  </view>
+
+</view>

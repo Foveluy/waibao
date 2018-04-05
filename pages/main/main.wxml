@@ -1,0 +1,9 @@
+<image class="pic1" src="../../res/1.png" mode='widthFix'></image>
+<view class='address'>
+  <view class='title'>
+    店面地址
+  </view>
+  <view>苏州市高新区金山路3号，力量纵横健身馆</view>
+  <view class='phone' bindtap='callLines'>固定电话：0512-68789405</view>
+  <view class='phone' bindtap='callCells'>客服电话：188602506725</view>
+</view>

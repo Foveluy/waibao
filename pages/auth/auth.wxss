@@ -1,0 +1,9 @@
+/* pages/auth/auth.wxss */
+.text{
+  font-size: 15px;
+  text-align: center;
+  margin: 30px;
+}
+page{
+  background: #eee;
+}

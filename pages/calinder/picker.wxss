@@ -1,0 +1,31 @@
+.pickerWrap {
+  display: flex;
+  background: #333;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  font-size: 12px;
+  color: white;
+}
+.pickerWrap .picker-item{
+  width: 100%;
+  padding: 1em;
+}
+.picker-item{
+  border-top: 1px solid rgba(120, 120, 120, 0.2);
+  
+}
+
+#mid{
+  border-left: 1px solid rgba(120, 120, 120, 0.2);
+   border-right: 1px solid rgba(120, 120, 120, 0.2);
+}
+.book{
+  
+  font-size: 18px;
+  text-align: center;
+}
+#book{
+  background: #5555FF;
+  color: white;
+}

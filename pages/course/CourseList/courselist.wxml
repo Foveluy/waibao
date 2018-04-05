@@ -1,0 +1,32 @@
+<template name='courselist'>
+
+
+
+<view class="course-list">
+  <view wx:for="{{CourseList}}" id='{{one.Item.id}}' wx:key="{{one.Item.id}}" class="course-item" wx:for-item="one" wx:for-index="INDEX" style="background-image:url({{backgroundimg[INDEX]}})" >
+    <view bindtap='bookClick' data-trainer="{{one.Item.trainer}}" data-courseModel='{{one.Item.courseModel}}' id='{{one.Item.id}}' class="book{{one.Item.state == 'done' ? '-done':''}}">{{one.Item.state == 'done' ? '结束':'预定'}}</view>
+    <view class="cover{{one.Item.state == 'done' ? '-done':''}} ">
+      <view class="course-detail">
+        <view class="name">{{one.Item.course}}</view>
+        <view class="time">{{one.Item.time}}</view>
+        <view class="wrap">
+          <view class="people">{{one.Item.member}}/{{one.Item.maxMember}}</view>
+          <view class="fees">费用：{{one.Item.credit}} 课时</view>
+          <view class="trainer-name">{{one.Item.trainer}}</view>
+        </view>
+      </view>
+      <view class="br"></view>
+      <view id='{{INDEX}}' bindtap="CheckStudent" class="student">
+        <image wx:for="{{one.peoples}}" wx:key="{{idx}}" class="userinfo-avatar" src="{{one.peoples[idx].avatarUrl}}"  wx:for-index="idx" background-size="cover">
+        <image hidden="{{item.enter == 'true'? false:true}}" class="enter" src="../../res/checked.svg"></image>
+        </image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+</template>

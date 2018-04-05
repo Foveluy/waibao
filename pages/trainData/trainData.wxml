@@ -1,0 +1,28 @@
+<!--pages/trainData/trainData.wxml-->
+<view bindtap="trainData" class="trainData">
+  <view>创建一条新记录</view>
+  <image src="../../res/right-arrow.svg"></image>
+</view>
+
+<view class="pr">
+  <view class="pr-title">我的PR</view>
+  <view class="br"></view>
+  <view class="pr-block">
+  <view class="pr-item" wx:for="{{max}}" wx:key="index">{{item.body}}：{{item.kg}} {{dataUnit[item.body]}}</view>
+  </view>
+  
+</view>
+
+<view class="trainBlock" bindtap="trainData" id='{{item.time}}' wx:for="{{bodyData}}" wx:key="{{index}}">
+  <view class="title">
+    <view class="day">{{item.time}}</view>
+    <image src="../../res/right-arrow.svg"></image>
+  </view>
+  <view class="br"></view>
+  <view class="data">
+    <view class="dataItem" wx:for="{{item.bodyData}}" wx:for-item="one">
+      {{one.body}}：{{one.kg}}{{dataUnit[one.body]}}
+    </view>
+  </view>
+
+</view>

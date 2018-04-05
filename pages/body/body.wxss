@@ -1,0 +1,19 @@
+/* pages/body/body.wxss */
+page{
+  background: #eee;
+}
+.block{
+  display: flex;
+  background: white;
+  margin: 30px;
+  align-items: center;
+}
+
+.left{
+  padding: 8px;
+  border-right:1px solid rgba(120, 120, 120, 0.2);
+
+}
+.input{
+  padding: 8px;
+}

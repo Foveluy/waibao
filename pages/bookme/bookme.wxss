@@ -1,0 +1,37 @@
+/* pages/bookme/bookme.wxss */
+@import "../Commen/Commen.wxss";
+
+page {
+  background: #eee;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-top: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.avt {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.br::after{
+  border-top: 1px dashed rgba(120, 120, 120, 0.2);
+}
+.wrap view{
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: rgba(120, 120, 120, 0.8)
+}
+.phone{
+  font-size: 18px;
+  color: #f79992;
+}

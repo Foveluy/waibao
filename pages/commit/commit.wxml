@@ -1,0 +1,33 @@
+<!--pages/commit/commit.wxml-->
+<view class="trainer-detail">
+  <view class="content">
+    <view class="title">{{trainer.trainer}}</view>
+    <view bindtap='dis' class="bref">{{trainer.bref}}</view>
+  </view>
+  <view class="icon">
+    <image class="userinfo-avatar" src="{{trainer.url}}" background-size="cover"></image>
+  </view>
+</view>
+
+<view class="commitWrap">
+  <view class="block" wx:for="{{commit}}" wx:for-index="idx" wx:key="idx"  >
+    <view class="title-block">
+      <view class="icon-block">
+        <image class="user-icon" src="{{item.userUrl}}" background-size="cover"></image>
+      </view>
+
+      <view class="title-text">
+        <view class="user-name">{{item.user}}</view>
+        <view class="user-time">{{item.time}}</view>
+        <view class="state" style="color:#f25">{{item.commitType =='1'?'<投诉>':''}}</view>
+        <view class="commit-text">{{item.commit}}</view>
+      </view>
+    </view>
+    <view class="br"></view>
+  </view>
+</view>
+
+<view class="writeWrap">
+  <picker class="picker" bindchange='pickerChange' value="{{idx}}" range="{{picker}}">选项：{{picker[idx]}}</picker>
+  <input style="height:35px;" value="{{inputValue}}" bindconfirm='wirteCommit' placeholder="输入评论" placeholder-style="padding-left:10px" />
+</view>

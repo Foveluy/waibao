@@ -1,0 +1,78 @@
+/* pages/trainData/trainData.wxss */
+@import "../Commen/Commen.wxss";
+
+page{
+  background: #eee;
+}
+
+image{
+  width: 15px;
+  height: 15px;
+}
+
+.trainData{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+  padding: 12px;
+  background: white;
+}
+
+.trainData:active{
+  background: #ccc;
+}
+.trainBlock{
+  background: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 15px;
+  color: rgba(120, 120, 120, 0.6);
+}
+
+.br::after{
+   border-top: 1px dashed rgba(120, 120, 120, 0.2);
+}
+.data{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dataItem{
+  margin: 5px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 15px;
+}
+.pr{
+  margin-top: 5px;
+  background: white;
+  padding: 10px;
+}
+.pr-title{
+  font-size: 15px;
+  color: rgba(120, 120, 120, 0.6);
+  padding: 5px;
+}
+.pr-item{
+  margin: 5px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  border-radius: 15px;
+  padding: 8px;
+  font-size: 15px;
+}
+.pr-block{
+  display: flex;
+  flex-wrap: wrap;
+}

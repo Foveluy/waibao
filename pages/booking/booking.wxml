@@ -1,0 +1,25 @@
+<!--pages/booking/booking.wxml-->
+<import src="tap/tap.wxml" />
+<import src="CourseDetail/coursedetail.wxml" />
+<scroll-view class="topImage" scroll-x>
+  <view class="topWrap">
+    <image mode='widthFix' wx:for="{{topImg}}" wx:key="index" src="{{item}}"></image>
+  </view>
+
+</scroll-view>
+
+
+<view class="trainer-detail">
+  <view class="centent">
+    <view class="title">{{courseDetail.trainer.trainer}}</view>
+    <view bindtap='dis' class="bref">{{courseDetail.trainer.bref}}</view>
+  </view>
+  <view class="icon">
+    <image class="userinfo-avatar" src="{{courseDetail.trainer.avatarUrl}}" background-size="cover"></image>
+  </view>
+</view>
+
+<template is='course-detail' data="{{courseDetail}}"></template>
+
+<template is='bookingtap'>
+</template>
