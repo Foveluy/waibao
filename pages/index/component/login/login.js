@@ -2,7 +2,24 @@ var CONST = require('../../../Commen/URL.js')
 var app = getApp()
 
 function loginCheck(that) {
-  that.setData({ isLogin: false })
+
+
+  wx.request({
+    url: CONST.URL.LOGIN + '/check',
+    method: 'POST',
+    data: {
+      jwt_code: wx.getStorageSync('ticket')
+    },
+    success: function (res) {
+      if (res.data.state === 'ok') {
+        that.setData({ isLogin: true })
+        wx.switchTab({ url: '../course/course' })
+      } else {
+        that.setData({ isLogin: false })
+      }
+    }
+  })
+
 }
 
 
@@ -13,15 +30,15 @@ function loginClick(event, that) {
   wx.login({
     success: function (res) {
       /** 发送登陆code给服务器*/
-      
+
       wx.request({
         url: CONST.URL.LOGIN,
         method: 'POST',
         data: {
-          Type:CONST.TYPE.CODE,
-          code:res.code,
-          userInfo:app.globalData.userInfo
-          },
+          Type: CONST.TYPE.CODE,
+          code: res.code,
+          userInfo: app.globalData.userInfo
+        },
         success: function (res) {
           that.setData({ isLogin: false })
           wx.hideLoading()
@@ -33,8 +50,8 @@ function loginClick(event, that) {
           wx.setStorageSync('ticket', ticket)
           wx.switchTab({ url: '../course/course' })
           console.log(wx.getStorageSync('ticket'))
-        },fail:function(){
-          
+        }, fail: function () {
+
           wx.showModal({
             title: '微信出错(login)',
             content: '本错误来自于微信本身，请尝试重启微信',
@@ -42,7 +59,7 @@ function loginClick(event, that) {
         }
       })
     },
-    fail:function(){
+    fail: function () {
       wx.showModal({
         title: '微信出错',
         content: '本错误来自于微信本身，请尝试重启微信',

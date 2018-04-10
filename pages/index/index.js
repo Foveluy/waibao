@@ -7,7 +7,7 @@ Page({
   data: {
     motto: 'Welcome to 力量纵横Xtrength !',
     userInfo: { avatarUrl: '../../res/user.png' },
-    isLogin: true
+    isLogin: false
   },
   //事件处理函数
   bindViewTap: function () {
@@ -16,6 +16,7 @@ Page({
     login.func(event, this)
   },
   onLoad: function (option) {
+
     if (option.login == 'LOGIN_VALID') {
       this.setData({
         isLogin:false
