@@ -1,4 +1,4 @@
-<import src="ControlPanel/cp.wxml" />
+<!-- <import src="ControlPanel/cp.wxml" />
 <import src="Modal/Modal.wxml" />
 <import src="CourseList/courselist.wxml" />
 
@@ -28,4 +28,6 @@
 
 <template is="courselist" data="{{CourseList,backgroundimg}}" />
 
-<template is="Modal" data="{{CourseList,ModalUse}}" />
+<template is="Modal" data="{{CourseList,ModalUse}}" /> -->
+
+<web-view src="{{courseSrc}}" ></web-view>

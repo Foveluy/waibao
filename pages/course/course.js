@@ -3,6 +3,7 @@ var Modal = require('Modal/Modal.js')
 var ControlPanel = require('ControlPanel/cp.js')
 var Trainer = require('ControlPanel/Trainer.js')
 var Commen = require("../Commen/Commen.js")
+var URL = require('../../pages/Commen/URL.js')
 
 Page({
   data: {
@@ -20,7 +21,8 @@ Page({
     currentTrainer: '',
     CourseList: [],
     backgroundimg: [],
-    timeAry: []
+    timeAry: [],
+    courseSrc: ''
   },
   ChangeTrainer: function (e) {
     Trainer.Trainer(e, this)
@@ -32,8 +34,11 @@ Page({
     ControlPanel.scan(this)
   },
   onLoad: function () {
-    let time = Commen.timeAry()
-    this.setData({timeAry: time})
+    // let time = Commen.timeAry()
+    // this.setData({ timeAry: time })
+    this.setData({
+      courseSrc: URL.host + '/' + wx.getStorageSync('ticket')
+    })
   },
   onShow: function () {
     /**初始化控制面板时间 */
