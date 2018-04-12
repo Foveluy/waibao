@@ -3,13 +3,10 @@ var app = getApp()
 
 function loginCheck(that) {
 
-
+  console.log(wx.getStorageSync('ticket'))
   wx.request({
     url: CONST.URL.LOGIN + '/check',
-    method: 'POST',
-    data: {
-      jwt_code: wx.getStorageSync('ticket')
-    },
+    header: { authorization: 'Bearer '+ wx.getStorageSync('ticket') },
     success: function (res) {
       if (res.data.state === 'ok') {
         that.setData({ isLogin: true })
