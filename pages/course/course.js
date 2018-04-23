@@ -37,8 +37,9 @@ Page({
     // let time = Commen.timeAry()
     // this.setData({ timeAry: time })
     this.setData({
-      courseSrc: URL.host + '/' + wx.getStorageSync('ticket')
+      courseSrc: URL.host + '/course/' + wx.getStorageSync('ticket')
     })
+    console.log(URL.host + '/course/' + wx.getStorageSync('ticket'))
   },
   onShow: function () {
     /**初始化控制面板时间 */

@@ -1,4 +1,5 @@
-const host = 'http://127.0.0.1:7001/api'
+// const host = 'http://127.0.0.1:7001/api'
+const host = 'https://zh.9uhxir.top/node_api/api'
 // const host = 'https://zh.9uhxir.top/django/zongheng/'
 
 var URL = {
@@ -22,4 +23,4 @@ var TYPE = {
 
 module.exports.URL = URL
 module.exports.TYPE = TYPE
-module.exports.host = 'http://127.0.0.1:3000'
+module.exports.host = 'https://zh.9uhxir.top/'
