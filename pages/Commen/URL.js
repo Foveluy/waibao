@@ -23,4 +23,4 @@ var TYPE = {
 
 module.exports.URL = URL
 module.exports.TYPE = TYPE
-module.exports.host = 'https://zh.9uhxir.top/'
+module.exports.host = 'https://zh.9uhxir.top'
