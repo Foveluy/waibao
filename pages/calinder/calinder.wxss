@@ -1,86 +1,98 @@
 @import "./picker.wxss";
-@import './dateWrap.wxss';
+@import "./dateWrap.wxss";
 page {
-    padding-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .trainer-detail {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    background: #333;
-    padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: #333;
+  padding: 1em;
 }
 
 .trainer-detail .title {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.exchange {
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 12px;
 }
 
 .trainer-detail .bref {
-    font-size: 14px;
-    width: 200px;
+  font-size: 14px;
+  width: 200px;
 }
 
 .icon image {
-    width: 200rpx;
-    height: 200rpx;
-    border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
 }
 
 .time-container {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
 .time {
-    background-color: black;
-    color: white;
-    margin: 4px;
-    border-radius: 3px;
-    border: 1px solid rgba(120, 120, 120, 0.1);
-    width: 20%;
-    text-align: center;
+  background-color: black;
+  color: white;
+  margin: 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+  width: 20%;
+  text-align: center;
 }
 
 .select-wrap {
-    display: flex;
+  display: flex;
 }
 
 .daywrap {
-    background-color: #333;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 4px;
+  background-color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4px;
 }
 
 .day {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .weekday {
-    font-size: 14px;
-    margin-top: 10px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .daywrap {
-    color: white;
+  color: white;
 }
 
 .day.active {
-    background-color: #f5222d;
-    color: white;
-    border-radius: 30px;
+  background-color: #f5222d;
+  color: white;
+  border-radius: 30px;
 }
 
 /* .timeWrap {

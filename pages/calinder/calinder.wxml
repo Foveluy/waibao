@@ -15,9 +15,10 @@
     <view class="weekday">{{item.weekDay}}</view>
   </view>
 </view>
+<view class="exchange" bind:tap="exchange" wx:if="{{!has_credit}}">4节团体课换1节私教课</view>
 <!-- 时间表 -->
 <view class="time-container">
-  <view class="time" bind:tap="timeSelect" id="{{index}}" style="background:{{ item.Type == 'T'?'#fef3eb':(item.Type == 'yours'?'#f5222d':(item.Type == 'other'?'#fa8c16':'black') ) }}" wx:for="{{time}}" wx:key="{{index}}">
+  <view class="time" bind:tap="timeSelect" id="{{index}}" style="background:{{ item.Type == 'T'?'black':(item.Type == 'yours'?'#f5222d':(item.Type == 'other'?'#fa8c16':'black') ) }}" wx:for="{{time}}" wx:key="{{index}}">
     <view class="timeWrap">
       <view class="realTime" style="color:{{item.pick === true?'#1890ff':'white'}}">
         {{item.time}}

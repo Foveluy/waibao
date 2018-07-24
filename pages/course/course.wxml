@@ -32,7 +32,7 @@
       <view bindtap="BookedTrainer" id="{{item.trainer}}" class="p-content">
         <view class="p-name">{{item.trainer}}</view>
         <view class="p-date">{{item.date}}</view>
-        <view class="p-time">「{{timeAry[item.start]}}~{{timeAry[item.end]}}」</view>
+        <view class="p-time">「{{timeAry[item.start-14]}}~{{timeAry[item.end-14]}}」</view>
       </view>
       <view bindtap="withdraw" id='{{index}}' class="delete">退课</view>
     </view>

@@ -21,4 +21,5 @@
 <view class="money-block ${{item.t ==='t'?'tuan':''}}" data-type="{{item.t}}" bind:tap="onPaymen" id="{{item.money}}" wx:for="{{money}}" wx:key="{{item.title}}">
     <view class="money">¥{{item.money}}</view>
     <view class="title">{{item.title}}</view>
+    <view class='hot' wx:if="{{item.hot}}" >火热销售中</view>
 </view>
