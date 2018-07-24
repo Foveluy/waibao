@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/payment/payment",
     "pages/trainData/trainData",
     "pages/body/body",
     "pages/me/me",
@@ -32,6 +33,12 @@
         "selectedIconPath": "res/user.png",
         "pagePath": "pages/me/me",
         "text": "我"
+      },
+      {
+        "iconPath": "res/wallet.png",
+        "selectedIconPath": "res/wallet-red.png",
+        "pagePath": "pages/payment/payment",
+        "text": "充值"
       },
       {
         "iconPath": "res/home.png",

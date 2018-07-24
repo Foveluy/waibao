@@ -2,11 +2,56 @@
 @import "Modal/Modal.wxss";
 @import "CourseList/courselist.wxss";
 @import "personCourse/pcourse.wxss";
-page{
-  background: #eee;
-  padding-bottom: 30px;
+page {
+    background: #eee;
+    padding-bottom: 30px;
 }
 
+.pageNation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
 
+.switcher {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #f5222d;
+    margin-top: 4px;
+}
 
+.active {
+    background-color: #f5222d;
+}
 
+.switcher view {
+    font-size: 12px;
+    width: 80px;
+    text-align: center;
+    padding: 4px;
+}
+
+.tuan {
+    border-right: 1px solid #f5222d;
+}
+
+.trainer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: black;
+    margin: 8px;
+    padding: 8px;
+    color: white;
+    border-radius: 5px;
+}
+
+.trainer-avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+}

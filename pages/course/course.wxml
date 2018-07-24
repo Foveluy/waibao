@@ -1,11 +1,26 @@
-<!-- <import src="ControlPanel/cp.wxml" />
+<import src="ControlPanel/cp.wxml" />
 <import src="Modal/Modal.wxml" />
 <import src="CourseList/courselist.wxml" />
-
-
-
+<!-- 页面的开头的按钮 -->
+<view class="pageNation">
+  <view class="switcher">
+    <view id="tuan" bind:tap="handleSwitcher" class="tuan {{currentSwitcher === 0?'active':''}}" style="color:{{currentSwitcher === 0?'black':'white'}}">
+      团课
+    </view>
+    <view id="si" bind:tap="handleSwitcher" class="si {{currentSwitcher === 1?'active':''}}" style="color:{{currentSwitcher === 1?'black':'white'}}">
+      私教
+    </view>
+  </view>
+</view>
 <template is="CP" data="{{...ControlPanel,trainerList}}" />
-
+<!-- 页面教练的列表 -->
+<view class='trainer-list' wx:if="{{currentSwitcher === 1?true:false}}" >
+  <view class="trainer-card" wx:for="{{trainerList}}" id="{{index}}" bindtap="ChangeTrainer" wx:key="{{item.trainer}}">
+    <image class="trainer-avatar" src="{{item.avatarUrl}}" />
+    <text class="trainer-name">教练：{{item.trainer}}</text>
+  </view>
+</view>
+<!-- 无关的列表 -->
 <view class="pWrap">
   <view class="personCourse" wx:if="{{item.enter =='true'?false:true}}" wx:for="{{personCourse}}" wx:key="index">
     <view bindtap="BookedTrainer" id="{{item.trainer}}" class="p-titlecontent">
@@ -23,11 +38,6 @@
     </view>
   </view>
 </view>
-
-
-
-<template is="courselist" data="{{CourseList,backgroundimg}}" />
-
-<template is="Modal" data="{{CourseList,ModalUse}}" /> -->
-
-<web-view src="{{courseSrc}}" ></web-view>
+<template is="courselist"  data="{{CourseList,backgroundimg,currentSwitcher}}" />
+<template is="Modal" data="{{CourseList,ModalUse}}" />
+<!-- <web-view src="{{courseSrc}}" ></web-view> -->

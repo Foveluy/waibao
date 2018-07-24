@@ -1,0 +1,24 @@
+<!-- pages/payment/payment.wxml -->
+<view class="state-block">
+    <view>
+        <text style="color:white;">充值账户人名字：{{realname}}</text>
+    </view>
+    <view>
+        <text style="color:white;">私教课程剩余节数：{{credit}} 节</text>
+    </view>
+    <view>
+        <text style="color:white;">团课程剩余节数：{{tuanMoney}} 节</text>
+    </view>
+</view>
+<view class="money-block" id='0.01' bind:tap="onPaymen" wx:if="{{ admin=='false' ? false:true}}">
+    <view class="money">0.01</view>
+    <view class="title">私教测试专用，管理员可见</view>
+</view>
+<view class="money-block tuan" id='0.02' data-type="t" bind:tap="onPaymen" wx:if="{{ admin=='false' ? false:true}}">
+    <view class="money">0.02</view>
+    <view class="title">团课测试专用，管理员可见</view>
+</view>
+<view class="money-block ${{item.t ==='t'?'tuan':''}}" data-type="{{item.t}}" bind:tap="onPaymen" id="{{item.money}}" wx:for="{{money}}" wx:key="{{item.title}}">
+    <view class="money">¥{{item.money}}</view>
+    <view class="title">{{item.title}}</view>
+</view>

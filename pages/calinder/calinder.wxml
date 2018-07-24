@@ -1,4 +1,4 @@
-<!--pages/calinder/calinder.wxml-->
+<!-- pages/calinder/calinder.wxml -->
 <view class="trainer-detail">
   <view class="content">
     <view class="title">{{trainer.trainer}}</view>
@@ -8,28 +8,34 @@
     <image class="userinfo-avatar" src="{{trainer.avatarUrl}}" background-size="cover"></image>
   </view>
 </view>
-
-<view class="dateWrap">
-  <view class="time">{{currentDate}}</view>
-</view>
-
-
-<view class="time" wx:for="{{time}}" wx:key="{{index}}">
-  <view class="timeWrap">
-    <view class="realTime">{{item.time}}</view>
+<!-- 周时间表 -->
+<view class="select-wrap">
+  <view bindtap='selectDay' id='{{idx}}' class="daywrap " wx:for="{{DateAry}}" wx:key="{{item.day}}" wx:for-index="idx">
+    <view class="day {{currentSelect == idx ? 'active':' '}}">{{item.day}}</view>
+    <view class="weekday">{{item.weekDay}}</view>
   </view>
-  <view class="barWrap">
-    <view class="pickModel">
-      <view style="background:{{ item.Type == 'T'?'#fef3eb':(item.Type == 'yours'?'#cfefdf':(item.Type == 'other'?'#e4e2fa':'white') ) }}" class="bar">
-        {{ item.Type == 'T'?'团体课':(item.Type == 'yours'?'你的预约':(item.Type == 'other'?'别人的预约':'')) }}
+</view>
+<!-- 时间表 -->
+<view class="time-container">
+  <view class="time" bind:tap="timeSelect" id="{{index}}" style="background:{{ item.Type == 'T'?'#fef3eb':(item.Type == 'yours'?'#f5222d':(item.Type == 'other'?'#fa8c16':'black') ) }}" wx:for="{{time}}" wx:key="{{index}}">
+    <view class="timeWrap">
+      <view class="realTime" style="color:{{item.pick === true?'#1890ff':'white'}}">
+        {{item.time}}
       </view>
-      <view class="br"></view>
     </view>
+    <!-- <view class="barWrap">
+      <view class="pickModel">
+        <view style="background:{{ item.Type == 'T'?'#fef3eb':(item.Type == 'yours'?'#cfefdf':(item.Type == 'other'?'#e4e2fa':'white') ) }}" class="bar">
+          {{ item.Type == 'T'?'团体课':(item.Type == 'yours'?'你的预约':(item.Type == 'other'?'别人的预约':'')) }}
+        </view>
+        <view class="br"></view>
+      </view>
+    </view> -->
   </view>
 </view>
-
+<!-- 下面的bar -->
 <view class="pickerWrap">
-  <view class="picker-item">
+  <!-- <view class="picker-item">
     <picker class="start" bindchange="bindStartPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{startIndex}}" range="{{multiArray}}">
       <view class="picker">开始时间：{{multiArray[startIndex]}}</view>
     </picker>
@@ -38,8 +44,18 @@
     <picker class="end" bindchange="bindEndPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{endIndex}}" range="{{multiArray}}">
       <view class="picker">结束时间：{{multiArray[endIndex]}}</view>
     </picker>
-  </view>
+  </view> -->
   <view bindtap="bookAsk" id='book' class="picker-item">
     <view class="book">约ta</view>
+  </view>
+</view>
+<view style="font-size:14px;" style="display:flex;margin-top:20px;justify-content:center">
+  <view style="display:flex;margin-right:20px;">
+    <view style="width:30px;height:20px;background:#fa8c16" />
+    代表被人预定
+  </view>
+  <view style="display:flex">
+    <view style="width:30px;height:20px;background:#f5222d" />
+    代表你的预定
   </view>
 </view>

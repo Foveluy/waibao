@@ -2,7 +2,7 @@
 
 
 
-<view class="course-list">
+<view class="course-list" wx:if="{{currentSwitcher === 1?false:true}}" >
   <view wx:for="{{CourseList}}" id='{{one.Item.id}}' wx:key="{{one.Item.id}}" class="course-item" wx:for-item="one" wx:for-index="INDEX" style="background-image:url({{backgroundimg[INDEX]}})" >
     <view bindtap='bookClick' data-trainer="{{one.Item.trainer}}" data-courseModel='{{one.Item.courseModel}}' id='{{one.Item.id}}' class="book{{one.Item.state == 'done' ? '-done':''}}">{{one.Item.state == 'done' ? '结束':'预定'}}</view>
     <view class="cover{{one.Item.state == 'done' ? '-done':''}} ">

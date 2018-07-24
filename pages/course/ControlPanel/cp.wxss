@@ -30,19 +30,35 @@
 .select-wrap {
   display: flex;
 }
-
 .daywrap {
   margin-top: 20px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+.day{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 .weekday {
+  font-size: 14px;
   margin-top: 10px;
 }
 
 .daywrap.active {
-  background-color: white;
-  color: rgba(0, 0, 255, 0.5);
+  background-color: #f5222d;
+  color: white;
   border-radius: 30px;
 }
 

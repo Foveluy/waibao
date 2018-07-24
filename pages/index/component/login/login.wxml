@@ -1,3 +1,5 @@
 <template name="login-template">
-  <view class="loginBtn" hidden="{{isLogin}}" bindtap="next">登陆</view>
+  <button open-type="getUserInfo" bind:getuserinfo="next" class="loginBtn" hidden="{{isLogin}}" >
+    登陆
+  </button>
 </template>

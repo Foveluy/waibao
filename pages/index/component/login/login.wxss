@@ -1,9 +1,9 @@
 .loginBtn{
   margin-top: 50px;
-  padding: 0.5em 3em;
+
   background-color: white;
-  border-radius:50px;
-  color: rgba(0, 0, 255, 0.5);
+  color: #f5222d;
+
 }
 .loginBtn:active{
   background-color: #999;

@@ -15,14 +15,14 @@ var img = [
 
 function queryCourse(that, fullDate, trainer) {
   wx.showNavigationBarLoading()
+  
   wx.request({
     url: CONST.URL.COURSE + '?date=' + fullDate + '&trainer=' + trainer,
-    success: (res) => {
-      console.log(res)
+    success: res => {
       wx.hideNavigationBarLoading()
-      var imgMap = res.data.map((item,index) => {
+      var imgMap = res.data.map((item, index) => {
         let num = index
-        if (num > 6)num = 0
+        if (num > 6) num = 0
         return img[num]
       })
 
@@ -35,8 +35,7 @@ function queryCourse(that, fullDate, trainer) {
 }
 
 function selectDays(that, ID) {
-  var newObj = Object.assign({}, that.data.ControlPanel,
-    { currentSelect: ID })
+  var newObj = Object.assign({}, that.data.ControlPanel, { currentSelect: ID })
 
   that.setData({ ControlPanel: newObj })
 
@@ -47,43 +46,43 @@ function selectDays(that, ID) {
 
 function initDate(that) {
   let day = Commen.GetSevenDate()
-  let newObj = Object.assign({}, that.data.ControlPanel,
-    { DateAry: day })
+  let newObj = Object.assign({}, that.data.ControlPanel, { DateAry: day })
   that.setData({ ControlPanel: newObj })
 
   selectDays(that, 0)
 }
 
-function scan(that,res) {
+function scan(that, res) {
   let ticket = wx.getStorageSync('ticket')
   let today = Commen.GetDateStr(0, 'fullDate')
-  
+
   wx.scanCode({
-    success: (res) => {
-      let url =  res.result
+    success: res => {
+      let url = res.result
       console.log(url)
       wx.showLoading({ title: '扫码成功，马上开始训练~' })
       wx.request({
         url: url,
-        method: "POST",
+        method: 'POST',
         data: { ticket: ticket, date: today },
-        success: function (res) {
+        success: function(res) {
           wx.hideLoading()
           app.globalData.courseForScan = res.data
           wx.navigateTo({
-            url: '../qrcode/qrcode',
+            url: '../qrcode/qrcode'
           })
           console.log(app.globalData.courseForScan)
         },
-        fail:function(){
+        fail: function() {
           wx.hideLoading()
-          wx.showToast({title: '二维码无效' })
+          wx.showToast({ title: '二维码无效' })
         }
       })
-    },fail:function(){
+    },
+    fail: function() {
       wx.showModal({
         title: '二维码扫描(scanCode)',
-        content: '没有进行二维码扫描操作或者二维码扫描无效',
+        content: '没有进行二维码扫描操作或者二维码扫描无效'
       })
     }
   })

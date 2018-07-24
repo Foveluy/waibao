@@ -1,9 +1,8 @@
 var CONST = require('../Commen/URL.js')
-var Commen = require("../Commen/Commen.js")
+var Commen = require('../Commen/Commen.js')
 
 var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -20,17 +19,18 @@ Page({
     showpersonCourse: false,
     showTCourse: false,
     birth: '',
-    realname: ''
+    realname: '',
+    tuanMoney: ''
   },
 
-  onLoad: function () {
+  onLoad: function() {
     let time = Commen.timeAry()
     this.setData({
       timeAry: time
     })
   },
 
-  onShow: function () {
+  onShow: function() {
     wx.showNavigationBarLoading()
 
     this.setData({
@@ -40,7 +40,7 @@ Page({
     let cc = []
     wx.request({
       url: CONST.URL.COURSE_RECORD + ticket,
-      success: (res) => {
+      success: res => {
         wx.hideNavigationBarLoading()
 
         let credit = res.data.credit
@@ -50,6 +50,7 @@ Page({
         let body = res.data.body
         let birth = res.data.birthdate
         let realname = res.data.realname
+        let tuanMoney = res.data.tuanMoney
         console.log(res.data)
         this.setData({
           credit: credit,
@@ -60,48 +61,55 @@ Page({
           body: JSON.parse(body),
           phone: res.data.phone,
           birth: birth,
-          realname: realname
+          realname: realname,
+          tuanMoney: tuanMoney
         })
       }
     })
   },
-  showPersonCourse: function () {
+  showPersonCourse: function() {
     this.setData({
       showpersonCourse: !this.data.showpersonCourse
     })
   },
-  showTCourse: function () {
+  showTCourse: function() {
     this.setData({
       showTCourse: !this.data.showTCourse
     })
   },
-  admin: function () {
+  admin: function() {
     wx.navigateTo({
       url: '../admin/admin'
     })
   },
-  toCommit: function (option) {
+  toCommit: function(option) {
     let name = option.currentTarget.id
     let courseId = option.currentTarget.dataset.courseid
     wx.navigateTo({
-      url: '../commit/commit?trainer=' + name + '&courseID=' + courseId + '&admin=' + this.data.admin,
+      url: '../commit/commit?trainer=' + name + '&courseID=' + courseId + '&admin=' + this.data.admin
     })
   },
-  traineData: function () {
+  traineData: function() {
     wx.navigateTo({
-      url: '../trainData/trainData',
+      url: '../trainData/trainData'
     })
   },
-  bookme: function () {
+  bookme: function() {
     wx.navigateTo({
-      url: '../bookme/bookme',
+      url: '../bookme/bookme'
     })
-
   },
-  userCard: function () {
+  userCard: function() {
     wx.navigateTo({
-      url: '../body/body?body=' + this.data.body + '&phone=' + this.data.phone + '&birth=' + (this.data.birth ? this.data.birth : '2015-1-1') + '&realname=' + this.data.realname
+      url:
+        '../body/body?body=' +
+        this.data.body +
+        '&phone=' +
+        this.data.phone +
+        '&birth=' +
+        (this.data.birth ? this.data.birth : '2015-1-1') +
+        '&realname=' +
+        this.data.realname
     })
   }
-
 })

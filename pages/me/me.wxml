@@ -6,9 +6,10 @@
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     </view>
     <view class="info">
-      <view class="user-credi">{{realname}}</view>
-      <view class="user-credit">余额：{{credit}}课时</view>
-      <view class="user-phone">电话：{{phone}}</view>
+      <view class="user-credit">{{realname}}</view>
+      <view class="user-credit">私教余额：{{credit}}课时</view>
+      <view class="user-credit">团课余额：{{tuanMoney}}课时</view>
+      <view class="user-phone user-credit">电话：{{phone}}</view>
     </view>
     <image class="inside-pic" src="../../res/zongheng_icon.jpg" mode="widthFix"></image>
 
@@ -47,9 +48,9 @@ module.exports = {
 <view class="auth" wx:if="{{ admin=='false' ? false:true}}">
   <view bindtap="admin">管理者权限</view>
 </view>
-<view class="T" wx:if="{{ trainer =='false' ? false:true}}">
+<!-- <view class="T" wx:if="{{ trainer =='false' ? false:true}}">
   <image src="../../res/urlcode.png" mode="widthFix"></image>
-</view>
+</view> -->
 
 <view class="course-record">
   <view bindtap="showPersonCourse" style="color:{{showpersonCourse == true?'black':''}}" class="title">私教约课记录</view>

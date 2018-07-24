@@ -3,7 +3,7 @@ var app = getApp()
 
 function loginCheck(that) {
 
-  console.log(wx.getStorageSync('ticket'))
+
   wx.request({
     url: CONST.URL.LOGIN + '/check',
     header: { authorization: 'Bearer '+ wx.getStorageSync('ticket') },

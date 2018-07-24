@@ -81,6 +81,9 @@ page{
   background-color: rgba(0, 0, 0, 0);
   width: 150px;
 }
+.user-credit{
+  font-size: 14px;
+}
 
 .title{
   background: white;

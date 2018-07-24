@@ -1,8 +1,8 @@
-const host = 'http://127.0.0.1:7001/api'
-// const host = 'https://zh.9uhxir.top/django/zongheng/'
+// const host = 'http://127.0.0.1:7001/api'
+const host = 'https://zh.9uhxir.top/django/zongheng'
 
 var URL = {
-  LOGIN: `${host}/login`,
+  LOGIN: `${host}/login/`,
   COURSE: `${host}/course/`,
   TRAINER: 'https://zh.9uhxir.top/django/zongheng/trainer/?name=',
   COURSE_MODEL: 'https://zh.9uhxir.top/django/zongheng/courseModel/',
