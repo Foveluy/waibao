@@ -6,7 +6,7 @@
 }
 
 .cover {
-  background: -webkit-gradient(linear, right bottom, left top, from(rgba(0, 150, 200, 0.4)), to(rgba(0, 50, 230, 0.7)));
+  background: -webkit-gradient(linear, right bottom, left top, from(#ffe7ba), to(#fa541c));
   border-radius: 5px;
   height: 100%;
 }
