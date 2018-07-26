@@ -4,8 +4,8 @@ var Picker = require("./timePicker.js");
 function ErrorDetect(data, that) {
   if (data == "PHONE_FAIL") {
     wx.showModal({
-      title: "您的生日信息有问题",
-      content: "请填写生日再进行约课,到「我」的资料中填写个人数据"
+      title: "您的信息有问题",
+      content: "请确保填写真实姓名、生日、以及联系电话再进行约课,到「我」页面中，点击个人头像填写个人数据"
     });
     setTimeout(() => wx.navigateBack({}), 3500);
     return false;
