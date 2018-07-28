@@ -12,7 +12,7 @@
 .tapWrap .booking {
   padding: 0.75em;
   width: 200%;
-  background: #5555FF;
+  background: rgba(255, 0, 0, 0.8);
 }
 
 .tapWrap .booking:active {

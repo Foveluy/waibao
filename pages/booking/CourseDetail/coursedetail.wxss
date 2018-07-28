@@ -22,7 +22,7 @@
 .detail-wrap .tag {
   background: #111;
   font-size: 15px;
-  color: #55f;
+  color: rgba(255, 0, 0, 0.8);
   width: 35%;
   padding: 3px;
   text-align: center;
