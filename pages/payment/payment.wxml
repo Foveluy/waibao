@@ -18,8 +18,9 @@
     <view class="money">0.02</view>
     <view class="title">团课测试专用，管理员可见</view>
 </view>
-<view class="money-block ${{item.t ==='t'?'tuan':''}}" data-type="{{item.t}}" bind:tap="onPaymen" id="{{item.money}}" wx:for="{{money}}" wx:key="{{item.title}}">
+<view class="money-block  ${{item.t ==='t'?'tuan':''}}" data-type="{{item.t}}" bind:tap="onPaymen" id="{{item.money}}" wx:for="{{money}}" wx:key="{{item.title}}">
     <view class="money">¥{{item.money}}</view>
     <view class="title">{{item.title}}</view>
     <view class='hot' wx:if="{{item.hot}}" >火热销售中</view>
+    <view class="hot" wx:if="{{item.left}}">剩余:{{left}}</view>
 </view>
