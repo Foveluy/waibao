@@ -14,10 +14,11 @@ Page({
     left: 200,
     money: [
       {
-        title: '店庆特惠私教课200份：260元/节，卖完为止',
+        title: '店庆特惠私教课200份，卖完为止',
         money: 260,
         left: true
       },
+      { title: '店庆特惠团课1份 1节', money: 66, t: 't', left: true },
       { title: '1v1私教课程 368元/节', money: 368 },
       { title: '3人内小团体课私教 588元/节', money: 588 },
       { title: '12节课程套餐 4260元(355/节)', money: 4260, hot: true },
