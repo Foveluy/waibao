@@ -15,7 +15,8 @@
     "pages/calinder/calinder",
     "pages/bookme/bookme",
     "pages/logs/logs",
-    "pages/main/main"
+    "pages/main/main",
+    "pages/qiang/qiang"
   ],
   "tabBar": {
     "color": "#fff",

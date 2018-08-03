@@ -1,0 +1,9 @@
+<view style="margin:20px;">
+    <view style="font-size:18px;font-weight:700;margin-bottom:16px;">
+        {{type}}抢课，{{permoney}}元每节，{{number}}节开抢！
+    </view>
+    <view style="padding:8px;border:1px solid rgba(120,120,120,0.2);border-radius:5px;">
+        <input bind:change="inputChange" bind:blur="inputChange" type='number' placeholder="输入你要抢的数值" />
+    </view>
+    <button style="margin-top:300px;" bind:tap="onQiang">抢课！</button>
+</view>
